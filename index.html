@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+<meta name="theme-color" content="#121916" />
+<meta name="description" content="ABSEN DIGITAL — Sistem Administrasi Absensi dan Perkembangan Siswa. Absensi dengan simpan otomatis, rekap Word/PDF/Excel, dan daftar Bebas Semester." />
+<meta name="application-name" content="ABSEN DIGITAL" />
+<title>ABSEN DIGITAL — Sistem Administrasi Absensi dan Perkembangan Siswa</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23127a68'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='12' y='6' width='8' height='4' rx='1'/%3E%3Cpath d='M20 8h2a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2'/%3E%3Cpath d='m12.5 17 2.5 2.5 4.5-4.5'/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="app/styles.css" />
+</head>
+<body>
+<div id="root"></div>
+<div id="print-root"></div>
+
+<!-- BUILD:VENDOR -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<!-- /BUILD:VENDOR -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+
+<!-- Konfigurasi Supabase pusat. Di Vercel file ini DITULIS ULANG saat build dari Environment Variables. -->
+<script src="app/config.js"></script>
+<script src="app/migration.js"></script>
+<script src="app/migration-0002.js"></script>
+<script src="app/migration-0003.js"></script>
+<script src="app/db.js"></script>
+<script src="app/logic.js"></script>
+<script src="app/export.js"></script>
+
+<!-- BUILD:JSX -->
+<script type="text/babel" src="app/icons.jsx"></script>
+<script type="text/babel" src="app/ui.jsx"></script>
+<script type="text/babel" src="app/store.jsx"></script>
+<script type="text/babel" src="app/auth.jsx"></script>
+<script type="text/babel" src="app/notes.jsx"></script>
+<script type="text/babel" src="app/crud.jsx"></script>
+<script type="text/babel" src="app/shell.jsx"></script>
+<script type="text/babel" src="app/autosave.jsx"></script>
+<script type="text/babel" src="app/doc-preview.jsx"></script>
+<script type="text/babel" src="app/pages-dashboard.jsx"></script>
+<script type="text/babel" src="app/pages-absensi.jsx"></script>
+<script type="text/babel" src="app/pages-data.jsx"></script>
+<script type="text/babel" src="app/pages-modules.jsx"></script>
+<script type="text/babel" src="app/pages-bebas.jsx"></script>
+<script type="text/babel" src="app/pages-progress.jsx"></script>
+<script type="text/babel" src="app/pages-rekap.jsx"></script>
+<script type="text/babel" src="app/pages-settings.jsx"></script>
+<script type="text/babel" src="app/main.jsx"></script>
+<!-- /BUILD:JSX -->
+</body>
+</html>
